@@ -35,8 +35,10 @@ header p {
 
 /* Formulário */
 form {
+    max-width: 100%;
+    width: 90%; /* Para que não fique muito grande em telas menores */
     background: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
