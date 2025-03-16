@@ -15,7 +15,7 @@ Este é um projeto para promover a conscientização sobre a importância da hig
 - JavaScript
 
 ## Como Utilizar
-```sh https://scih-hslc.github.io/Higienedasmaos/
+```https://scih-hslc.github.io/Higienedasmaos/
 
 # Acesse a pasta do projeto
 cd higienedasmaos
