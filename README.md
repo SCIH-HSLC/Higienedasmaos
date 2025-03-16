@@ -15,8 +15,8 @@ Este é um projeto para promover a conscientização sobre a importância da hig
 - JavaScript
 
 ## Como Utilizar
-```O site "Registro de Higiene das Mãos" é uma ferramenta desenvolvida para monitorar e promover a adesão às práticas de higiene das mãos em ambientes de saúde. Ele permite que observadores registrem oportunidades de higiene das mãos, contribuindo para a melhoria contínua dos protocolos de segurança e prevenção de infecções.
-```
+O site "Registro de Higiene das Mãos" é uma ferramenta desenvolvida para monitorar e promover a adesão às práticas de higiene das mãos em ambientes de saúde. Ele permite que observadores registrem oportunidades de higiene das mãos, contribuindo para a melhoria contínua dos protocolos de segurança e prevenção de infecções.
+
 
 ##Preenchimento dos Dados:
 Nome ou Sigla do Observador: Informe seu nome ou uma sigla identificadora.
@@ -50,22 +50,6 @@ Cada formulário enviado corresponde a uma oportunidade de higiene das mãos obs
 # Acesse a pasta do projeto
 [cd higienedasmaos](https://scih-hslc.github.io/Higienedasmaos/)
 
-# Abra o arquivo index.html no navegador
-```
-
-## Contribuição
-Contribuições são bem-vindas! Para contribuir, siga os passos:
-```sh
-# Fork o repositório
-# Crie uma branch para sua funcionalidade
- git checkout -b minha-funcionalidade
-
-# Commit suas alterações
- git commit -m 'Adiciona nova funcionalidade'
-
-# Push para a branch
- git push origin minha-funcionalidade
-```
 
 ## Contato
 Caso tenha dúvidas ou sugestões, entre em contato:
