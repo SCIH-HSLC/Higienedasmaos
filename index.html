@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Webcrumbs Plugin</title>
+        <title>Formulario HM</title>
         <style>
             @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
             @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
@@ -377,11 +377,11 @@
             #webcrumbs .w-5 {
                 width: 20px;
             }
-            #webcrumbs .w-\[1100px\] {
-                width: 1100px;
-            }
             #webcrumbs .w-full {
                 width: 100%;
+            }
+            #webcrumbs .max-w-\[1100px\] {
+                max-width: 1100px;
             }
             #webcrumbs .transform {
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
@@ -466,9 +466,6 @@
             #webcrumbs .p-4 {
                 padding: 16px;
             }
-            #webcrumbs .p-6 {
-                padding: 24px;
-            }
             #webcrumbs .px-2 {
                 padding-left: 8px;
                 padding-right: 8px;
@@ -487,10 +484,6 @@
             #webcrumbs .text-2xl {
                 font-size: 24px;
                 line-height: 31.200000000000003px;
-            }
-            #webcrumbs .text-3xl {
-                font-size: 30px;
-                line-height: 36px;
             }
             #webcrumbs .text-lg {
                 font-size: 18px;
@@ -609,6 +602,18 @@
                 --tw-text-opacity: 1;
                 color: rgb(79 70 229 / var(--tw-text-opacity));
             }
+            @media (min-width: 768px) {
+                #webcrumbs .md\:mb-6 {
+                    margin-bottom: 24px;
+                }
+                #webcrumbs .md\:p-6 {
+                    padding: 24px;
+                }
+                #webcrumbs .md\:text-3xl {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+            }
 
             body {
                 line-height: inherit;
@@ -626,31 +631,31 @@
     <body>
         <div id="webcrumbs">
             <div
-                class="w-[1100px] mx-auto font-roboto bg-gradient-to-r from-blue-100 to-blue-200 bg-[length:200%_100%] animate-[background-pan_15s_infinite_alternate] p-4"
+                class="w-full max-w-[1100px] mx-auto font-roboto bg-gradient-to-r from-blue-100 to-blue-200 bg-[length:200%_100%] animate-[background-pan_15s_infinite_alternate] p-4 md:p-6"
             >
                 <header class="bg-indigo-500 text-white p-4 rounded-t-lg shadow-md">
                     <div class="text-center">
-                        <h1 class="text-3xl font-bold mb-1">Registro de Higiene das Mãos</h1>
+                        <h1 class="text-2xl md:text-3xl font-bold mb-1">Registro de Higiene das Mãos</h1>
                         <p class="text-lg">Monitore a adesão às práticas de higiene de forma eficiente</p>
                     </div>
                 </header>
                 <main class="mt-4">
                     <div
-                        class="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg mb-6 transition-all duration-300 hover:shadow-xl"
+                        class="bg-white bg-opacity-90 p-4 md:p-6 rounded-lg shadow-lg mb-4 md:mb-6 transition-all duration-300 hover:shadow-xl"
                     >
                         <h2 class="text-xl font-semibold text-indigo-600 mb-2">Informativo</h2>
                         <p class="text-gray-700">Cada formulário enviado será para 1 oportunidade!</p>
                     </div>
-                    <form class="bg-white p-6 rounded-lg shadow-lg">
+                    <form class="bg-white p-4 md:p-6 rounded-lg shadow-lg">
                         <h2 class="text-2xl font-semibold text-indigo-600 mb-4">Preencha os Dados</h2>
-                        <div class="mb-4">
+                        <div class="mb-4 md:grid md:grid-cols-2 md:gap-4">
                             <label for="nome" class="block font-medium text-gray-700 mb-1">Nome ou Sigla:</label>
                             <p class="text-sm text-gray-500 -mt-1 mb-1">Do observador</p>
                             <input
                                 type="text"
                                 id="nome"
                                 name="nome"
-                                class="w-1/2 p-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+                                class="w-full p-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
                             />
                         </div>
                         <div class="mb-4">
@@ -676,7 +681,7 @@
                                 class="w-full p-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
                             />
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-4 md:grid md:grid-cols-2 md:gap-4">
                             <label for="profissao" class="block font-medium text-gray-700 mb-1">Profissão:</label>
                             <select
                                 id="profissao"
@@ -708,7 +713,7 @@
                                 <option value="NOITE">Noite</option>
                             </select>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-4 md:grid md:grid-cols-2 md:gap-4">
                             <label for="setor" class="block font-medium text-gray-700 mb-1">Setor:</label>
                             <select
                                 id="setor"
@@ -736,7 +741,7 @@
                                 <option value="SADT">SADT</option>
                             </select>
                         </div>
-                        <fieldset class="border border-gray-300 rounded-md p-4 mb-6">
+                        <fieldset class="border border-gray-300 rounded-md p-3 md:p-4 mb-4 md:mb-6">
                             <legend class="text-lg font-semibold text-indigo-600 px-2">Indicações:</legend>
                             <div class="space-y-2">
                                 <label class="flex items-center cursor-pointer group">
