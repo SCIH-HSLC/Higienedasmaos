@@ -1,0 +1,408 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Higiene das Mãos</title>
+    <link rel="stylesheet" href="styles.css">
+     <style type="text/css">
+         /* Fontes e Resets */
+/* Fontes e Resets */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://img.freepik.com/vetores-premium/bolhas-de-ar-sibilantes-subaquaticas-bebida-gaseificada-ilustracao-vetorial_313437-1195.jpg');
+    height: 100vh;
+    color: #333;
+    line-height: 1.6;
+   animation: animate 15s infinite alternate; /* Animação aplicada */
+}
+
+@keyframes animate {
+  0% {background-position: 0}
+  100% {background-position: 200%}
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+ header {
+            background-color: #5b5be3;
+            color: white;
+            padding: 0px;
+            width: auto;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+.btn-submit:hover {
+    background: #0056b3;
+}
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Formulário */
+form {
+    max-width: auto;
+    width: auto; /* Para que não fique muito grande em telas menores */
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.form-group, fieldset {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+input {
+    width: 49%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+ select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+ textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Geral para labels */
+.radio-group label {
+    display: flex; /* Flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 0px; /* Espaço entre o checkbox/radio e o texto */
+    margin-bottom: 8px; /* Espaçamento entre os itens */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+/* Resetando margens dos inputs */
+.radio-group input[type="radio"] {
+    margin: 0; /* Remove margens padrão */
+    flex-shrink: 0; /* Impede que o input encolha no flexbox */
+}
+
+/* Ajustes para corrigir alinhamento vertical */
+.radio-group label input {
+    position: relative; /* Permite ajustes precisos */
+    top: 0; /* Garante alinhamento vertical */
+    transform: translateY(5px); /* Pequeno ajuste, se necessário */
+}
+
+
+
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Botão */
+.btn-submit {
+    background: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #5b5be3;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .btn-submit {
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="form-container">
+            <h1>Registro de Higiene das Mãos</h1>
+            <p>Monitore a adesão às práticas de higiene de forma eficiente</p>
+        </div>
+    </header>
+    <main>
+         <div class="container">
+          <h2>Informativo</h2>
+            <p> Cada formulario enviado sera para 1 oportunidade!</p>
+          </div>
+            <form action="https://api.sheetmonkey.io/form/q32tKC5QrSuJQi7LQUjBpV" method="post"
+                   id="hygieneForm" class="form-card" onsubmit="return handleFormSubmit(event)">
+                <form id="form">
+                <h2>Preencha os Dados</h2>
+                <div class="form-group">
+                    <label for="oportunidades">Nome ou Sigla:</label><p>Do observador</p>
+                    <input type="name" id="nome" name="nome" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="observador">Observador:</label>
+                    <select id="observador" name="observador" required>
+                        <option value="">Selecione</option>
+                        <option value="oculto">Oculto</option>
+                        <option value="scih">SCIH</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="profissao">Profissão:</label>
+                    <select id="profissao" name="profissao" required>
+                        <option value="">Selecione</option>
+                        <option value="TEC_ENF">Técnico de Enfermagem</option>
+                        <option value="ENF">Enfermeiro</option>
+                        <option value="MED">Médico</option>
+                        <option value="FISIO">Fisioterapeuta</option>
+                        <option value="FONO">Fonoaudiologia</option>
+                        <option value="NUTRI">Nutricionista</option>
+                        <option value="EP">Experiência do Paciente</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="turno">Turno:</label>
+                    <select id="turno" name="turno" required>
+                        <option value="">Selecione</option>
+                        <option value="MANHÃ">Manhã</option>
+                        <option value="TARDE">Tarde</option>
+                        <option value="NOITE">Noite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="setor">Setor:</label>
+                    <select id="setor" name="setor" required>
+                        <option value="">Selecione</option>
+                        <option value="UTI ADU">UTI ADU</option>
+                        <option value="UTI PED">UTI PED</option>
+                        <option value="UTI NEO">UTI NEO</option>
+                        <option value="PSA">PSA</option>
+                        <option value="PSI">PSI</option>
+                        <option value="PSGO">PSGO</option>
+                        <option value="PSORT">PSORT</option>
+                        <option value="5°Onco">5°Onco</option>
+                         <option value="5°clinico">5°clinico</option>
+                        <option value="7°">7°</option>
+                        <option value="6°">6°</option>
+                        <option value="mater">mater</option>
+                        <option value="PED">PED</option>
+                        <option value="CC">CC</option>
+                        <option value="CO">CO</option>
+                        <option value="HOSP DIA">HOSP DIA</option>
+                        <option value="SADT">SADT</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Indicações:</legend>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="indicacoes" value="Ant_pact"> 
+                            Antes do contato com paciente
+                        </label>
+                        <label>
+                            <input type="radio" name="indicacoes" value="Ant_Proced"> 
+                            Antes de procedimento
+                        </label>
+                        <label>
+                            <input type="radio" name="indicacoes" value="Ap_fluid"> 
+                            Após risco de exposição a fluidos
+                        </label>
+                        <label>
+                            <input type="radio" name="indicacoes" value="Ap_pact"> 
+                            Após contato com paciente
+                        </label>
+                        <label>
+                            <input type="radio" name="indicacoes" value="Ap_próximo"> 
+                            Após contato com proximidades do paciente
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Ação:</legend>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="acao" value="Ácool">
+                            Higiene com álcool
+                        </label>
+                        <label>
+                            <input type="radio" name="acao" value="Sabonete">
+                            Higiene com sabonete
+                        </label>
+                        <label>
+                            <input type="radio" name="acao" value="Não">
+                            Nenhuma
+                        </label>
+                        <label>
+                            <input type="radio" name="acao" value="Luvas"> 
+                            Uso de luvas
+                        </label>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-submit">Registrar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+            <p>&copy; 2024 - Registro de Higiene das Mãos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+  <script>
+ function handleFormSubmit(event) {
+    event.preventDefault(); // Impede o comportamento padrão do envio
+
+    const form = event.target;
+    const indicacoesChecked = document.querySelectorAll('input[name="indicacoes"]:checked').length;
+    const acaoChecked = document.querySelectorAll('input[name="acao"]:checked').length;
+
+    const container = document.querySelector('.container');
+
+    // Verifica se pelo menos uma checkbox foi selecionada em cada grupo
+    if  (indicacoesChecked === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; color: #f5be27; border: 1px solid #e00000; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                <h2>Aviso</h2>
+                <p>Por favor, selecione pelo menos uma indicação.</p>
+                <button class="btn-submit" onclick="location.reload()">Voltar ao formulário</button>
+            </div>
+        `;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return false;
+    }
+
+    if (acaoChecked === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; color: #f5be27; border: 1px solid #e00000; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                <h2>Aviso</h2>
+                <p>Por favor, selecione pelo menos uma ação.</p>
+                <button class="btn-submit" onclick="location.reload()">Voltar ao formulário</button>
+            </div>
+        `;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return false;
+    }
+
+    // Enviar dados manualmente usando fetch
+    fetch(form.action, {
+        method: form.method,
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(new FormData(form))
+    }).then(response => {
+        if (response.ok) {
+            container.innerHTML = `
+                <div style="text-align: center;">
+                    <h2>Registro enviado com sucesso!</h2>
+                    <p>Obrigado por contribuir para o monitoramento de higiene das mãos.</p>
+                </div>
+            `;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            container.innerHTML = `
+                <div style="text-align: center; color: #d9534f border: 1px solid #d9534f; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                    <h2>Erro</h2>
+                    <p>Ocorreu um erro ao enviar o registro.</p>
+                    <button class="btn-submit" onclick="location.reload()">Tentar novamente</button>
+                </div>
+            `;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }).catch(error => {
+        console.error("Erro:", error);
+        container.innerHTML = `
+            <div style="text-align: center; color: #d9534f; border: 1px solid #d9534f; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                <h2>Erro</h2>
+                <p>Erro ao enviar o registro. Por favor, tente novamente mais tarde.</p>
+                <button class="btn-submit" onclick="location.reload()">Tentar novamente</button>
+            </div>
+        `;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    return false; // Garante que o formulário não será enviado novamente
+}
+
+
+</script>
+
+</body>
+</html>
