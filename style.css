@@ -1,75 +1,60 @@
-/* ==========================================================================
-   Fontes e Resets
-   ========================================================================== */
-
+ /* Fontes e Resets */
+/* Fontes e Resets */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
 }
 
-/* ==========================================================================
-   Estilos Globais do Body
-   ========================================================================== */
-
 body {
     font-family: 'Roboto', sans-serif;
     background: url('https://img.freepik.com/vetores-premium/bolhas-de-ar-sibilantes-subaquaticas-bebida-gaseificada-ilustracao-vetorial_313437-1195.jpg');
-    height: 100vh; /* Garante que o background cubra toda a altura da tela */
+    height: 100vh;
     color: #333;
     line-height: 1.6;
-    animation: animate 15s infinite alternate; /* Animação sutil do background */
+   animation: animate 15s infinite alternate; /* Animação aplicada */
 }
 
 @keyframes animate {
-    0% { background-position: 0 }
-    100% { background-position: 200% }
+  0% {background-position: 0}
+  100% {background-position: 200%}
 }
 
-/* ==========================================================================
-   Container Principal
-   ========================================================================== */
-
 .container {
-    max-width: 1100px; /* Largura máxima do container */
-    margin: 2rem auto; /* Centraliza o container na tela */
+    max-width: 1100px;
+    margin: 2rem auto;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* Espaçamento entre os itens filhos (header, form) */
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* ==========================================================================
-   Cabeçalho
-   ========================================================================== */
-
-header {
-    background-color: #5b5be3;
-    color: white;
-    padding: 1rem 0; /* Adicionado padding vertical para melhor espaçamento */
-    width: 100%; /* Garante que o header ocupe toda a largura do container */
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Cabeçalho */
+ header {
+            background-color: #5b5be3;
+            color: white;
+            padding: 0px;
+            width: auto;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+.btn-submit:hover {
+    background: #0056b3;
 }
-
 header h1 {
     font-size: 2rem;
-    margin-bottom: 0.5rem; /* Adicionado margem inferior para espaçamento do parágrafo */
 }
 
 header p {
     font-size: 1.2rem;
 }
 
-/* ==========================================================================
-   Formulário
-   ========================================================================== */
-
+/* Formulário */
 form {
-    max-width: 100%; /* Garante que não ultrapasse a largura do container */
-    width: 100%;
+    max-width: auto;
+    width: auto; /* Para que não fique muito grande em telas menores */
     background: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -87,22 +72,27 @@ form h2 {
 }
 
 label {
-    display: block; /* Garante que cada label ocupe uma linha */
-    margin-bottom: 8px; /* Reduzido um pouco o espaçamento */
+    display: flex;
+    margin-bottom: 15px;
     font-weight: 500;
 }
-
 input {
-    width: calc(50% - 5px); /* Considera a margem entre os inputs */
+    width: 49%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
 }
-
-select,
-textarea {
+ select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+ textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -111,19 +101,30 @@ textarea {
     font-size: 1rem;
 }
 
-/* Estilos para o grupo de radio buttons */
+/* Geral para labels */
 .radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Aumentado um pouco o espaço */
-    margin-bottom: 10px; /* Aumentado um pouco o espaçamento entre os radios */
-    text-align: left;
+    display: flex; /* Flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 0px; /* Espaço entre o checkbox/radio e o texto */
+    margin-bottom: 8px; /* Espaçamento entre os itens */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
 }
 
+/* Resetando margens dos inputs */
 .radio-group input[type="radio"] {
-    margin-right: 5px; /* Adicionado margem à direita do radio button */
-    flex-shrink: 0;
+    margin: 0; /* Remove margens padrão */
+    flex-shrink: 0; /* Impede que o input encolha no flexbox */
 }
+
+/* Ajustes para corrigir alinhamento vertical */
+.radio-group label input {
+    position: relative; /* Permite ajustes precisos */
+    top: 0; /* Garante alinhamento vertical */
+    transform: translateY(5px); /* Pequeno ajuste, se necessário */
+}
+
+
+
 
 fieldset {
     border: 1px solid #ccc;
@@ -137,10 +138,7 @@ legend {
     color: #007bff;
 }
 
-/* ==========================================================================
-   Botão de Submissão
-   ========================================================================== */
-
+/* Botão */
 .btn-submit {
     background: #00796b;
     color: #fff;
@@ -149,29 +147,20 @@ legend {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease; /* Adicionada função de easing para a transição */
+    transition: background 0.3s;
 }
 
-.btn-submit:hover {
-    background: #0056b3;
-}
 
-/* ==========================================================================
-   Rodapé
-   ========================================================================== */
-
+/* Rodapé */
 footer {
     text-align: center;
-    padding: 1rem 0; /* Adicionado padding vertical */
+    padding: 10px 0;
     background: #5b5be3;
     color: #fff;
     margin-top: 20px;
 }
 
-/* ==========================================================================
-   Responsividade
-   ========================================================================== */
-
+/* Responsividade */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8rem;
@@ -191,9 +180,5 @@ footer {
 
     .btn-submit {
         font-size: 0.9rem;
-    }
-
-    input {
-        width: 100%; /* Inputs ocupam a largura total em telas menores */
     }
 }
