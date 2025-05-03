@@ -6,98 +6,189 @@
     <title>Registro de Higiene das Mãos</title>
     <link rel="stylesheet" href="styles.css">
      <style type="text/css">
-        @tailwind base;
-@tailwind components;
-@tailwind utilities;
+         /* Fontes e Resets */
+/* Fontes e Resets */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  font-family: 'Roboto', sans-serif; /* Using Roboto as requested */
+    font-family: 'Roboto', sans-serif;
+    background: url('https://img.freepik.com/vetores-premium/bolhas-de-ar-sibilantes-subaquaticas-bebida-gaseificada-ilustracao-vetorial_313437-1195.jpg');
+    height: 100vh;
+    color: #333;
+    line-height: 1.6;
+   animation: animate 15s infinite alternate; /* Animação aplicada */
 }
 
-@layer base {
-  :root {
-    --background: 210 17% 95%; /* Light Gray (#ECEFF1) */
-    --foreground: 210 10% 23%; /* Dark Gray for text */
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 210 10% 23%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 23%;
-    --primary: 33 100% 64%; /* Orange (#FFB347) */
-    --primary-foreground: 210 10% 10%; /* Dark text on orange */
-    --secondary: 210 17% 90%; /* Slightly darker gray for secondary elements */
-    --secondary-foreground: 210 10% 23%;
-    --muted: 210 17% 90%;
-    --muted-foreground: 210 10% 45%; /* Medium gray text */
-    --accent: 174 40% 60%; /* Soft Teal (#4DB6AC) */
-    --accent-foreground: 210 10% 10%; /* Dark text on teal */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 17% 85%;
-    --input: 210 17% 85%;
-    --ring: 33 100% 64%; /* Orange for focus rings */
-    --chart-1: 33 100% 64%; /* Orange */
-    --chart-2: 174 40% 60%; /* Teal */
-    --chart-3: 210 10% 45%; /* Medium Gray */
-    --chart-4: 33 100% 75%; /* Lighter Orange */
-    --chart-5: 174 40% 70%; /* Lighter Teal */
-    --radius: 0.5rem;
-
-     /* Keeping sidebar variables, although not explicitly used in this design */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    /* Define dark theme variables if needed, inverting lightness or using darker shades */
-    --background: 210 10% 15%; /* Dark Gray */
-    --foreground: 210 17% 95%; /* Light Gray text */
-    --card: 210 10% 20%;
-    --card-foreground: 210 17% 95%;
-    --popover: 210 10% 15%;
-    --popover-foreground: 210 17% 95%;
-    --primary: 33 100% 64%; /* Orange */
-    --primary-foreground: 210 10% 10%;
-    --secondary: 210 10% 25%;
-    --secondary-foreground: 210 17% 95%;
-    --muted: 210 10% 25%;
-    --muted-foreground: 210 10% 65%;
-    --accent: 174 40% 60%; /* Teal */
-    --accent-foreground: 210 10% 10%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 10% 30%;
-    --input: 210 10% 30%;
-    --ring: 33 100% 64%;
-    --chart-1: 33 100% 64%;
-    --chart-2: 174 40% 60%;
-    --chart-3: 210 10% 65%;
-    --chart-4: 33 100% 55%;
-    --chart-5: 174 40% 50%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+@keyframes animate {
+  0% {background-position: 0}
+  100% {background-position: 200%}
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+ header {
+            background-color: #5b5be3;
+            color: white;
+            padding: 0px;
+            width: auto;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+.btn-submit:hover {
+    background: #0056b3;
+}
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Formulário */
+form {
+    max-width: auto;
+    width: auto; /* Para que não fique muito grande em telas menores */
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.form-group, fieldset {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+input {
+    width: 49%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+ select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+ textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Geral para labels */
+.radio-group label {
+    display: flex; /* Flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 0px; /* Espaço entre o checkbox/radio e o texto */
+    margin-bottom: 8px; /* Espaçamento entre os itens */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+/* Resetando margens dos inputs */
+.radio-group input[type="radio"] {
+    margin: 0; /* Remove margens padrão */
+    flex-shrink: 0; /* Impede que o input encolha no flexbox */
+}
+
+/* Ajustes para corrigir alinhamento vertical */
+.radio-group label input {
+    position: relative; /* Permite ajustes precisos */
+    top: 0; /* Garante alinhamento vertical */
+    transform: translateY(5px); /* Pequeno ajuste, se necessário */
+}
+
+
+
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Botão */
+.btn-submit {
+    background: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #5b5be3;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .btn-submit {
+        font-size: 0.9rem;
+    }
 }
 
 </style>
