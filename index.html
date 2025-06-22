@@ -1,407 +1,253 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Higiene das Mãos</title>
-    <link rel="stylesheet" href="styles.css">
-     <style type="text/css">
-      /* Fontes e Resets */
-/* Fontes e Resets */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: url('https://img.freepik.com/vetores-premium/bolhas-de-ar-sibilantes-subaquaticas-bebida-gaseificada-ilustracao-vetorial_313437-1195.jpg');
-    height: 100vh;
-    color: #333;
-    line-height: 1.6;
-   animation: animate 15s infinite alternate; /* Animação aplicada */
-}
-
-@keyframes animate {
-  0% {background-position: 0}
-  100% {background-position: 200%}
-}
-
-.container {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Cabeçalho */
- header {
-            background-color: #5b5be3;
-            color: white;
-            padding: 0px;
-            width: auto;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-.btn-submit:hover {
-    background: #0056b3;
-}
-header h1 {
-    font-size: 2rem;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-/* Formulário */
-form {
-    max-width: auto;
-    width: auto; /* Para que não fique muito grande em telas menores */
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form h2 {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    color: #007bff;
-}
-
-.form-group, fieldset {
-    margin-bottom: 20px;
-}
-
-label {
-    display: flex;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-input {
-    width: 49%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
- select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
- textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-/* Geral para labels */
-.radio-group label {
-    display: flex; /* Flexbox para alinhamento horizontal */
-    align-items: center; /* Alinha verticalmente os itens */
-    gap: 0px; /* Espaço entre o checkbox/radio e o texto */
-    margin-bottom: 8px; /* Espaçamento entre os itens */
-    text-align: left; /* Garante que o texto fique alinhado à esquerda */
-}
-
-/* Resetando margens dos inputs */
-.radio-group input[type="radio"] {
-    margin: 0; /* Remove margens padrão */
-    flex-shrink: 0; /* Impede que o input encolha no flexbox */
-}
-
-/* Ajustes para corrigir alinhamento vertical */
-.radio-group label input {
-    position: relative; /* Permite ajustes precisos */
-    top: 0; /* Garante alinhamento vertical */
-    transform: translateY(5px); /* Pequeno ajuste, se necessário */
-}
-
-
-
-
-fieldset {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-legend {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #007bff;
-}
-
-/* Botão */
-.btn-submit {
-    background: #00796b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #5b5be3;
-    color: #fff;
-    margin-top: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    form {
-        padding: 15px;
-    }
-
-    legend {
-        font-size: 1rem;
-    }
-
-    .btn-submit {
-        font-size: 0.9rem;
-    }
-}
-
-</style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Higiene das Mãos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="form-container">
-            <h1>Registro de Higiene das Mãos</h1>
-            <p>Monitore a adesão às práticas de higiene de forma eficiente</p>
-        </div>
+<body class="roboto font-sans antialiased min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
+  <div class="flex flex-col min-h-screen">
+    <header class="bg-indigo-600 text-white py-6 shadow-md">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-3xl font-bold mb-2">Registro de Higiene das Mãos</h1>
+        <p class="text-lg opacity-90">Monitore a adesão às práticas de higiene de forma eficiente</p>
+      </div>
     </header>
-    <main>
-         <div class="container">
-          <h2>Informativo</h2>
-            <p> Cada formulario enviado sera para 1 oportunidade!</p>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md">
+          <div class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p>Cada formulário enviado será para 1 oportunidade observada!</p>
           </div>
-            <form action="https://api.sheetmonkey.io/form/q32tKC5QrSuJQi7LQUjBpV" method="post"
-                   id="hygieneForm" class="form-card" onsubmit="return handleFormSubmit(event)">
-                <form id="form">
-                <h2>Preencha os Dados</h2>
-                <div class="form-group">
-                    <label for="oportunidades">Nome ou Sigla:</label><p>Do observador</p>
-                    <input type="name" id="nome" name="nome" min="0">
-                </div>
-                <div class="form-group">
-                    <label for="observador">Observador:</label>
-                    <select id="observador" name="observador" required>
-                        <option value="">Selecione</option>
-                        <option value="oculto">Membro do Time</option>
-                        <option value="scih">SCIH</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="data">Data da auditoria:</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
-                <div class="form-group">
-                    <label for="profissao">Profisional auditado:</label>
-                    <select id="profissao" name="profissao" required>
-                        <option value="">Selecione</option>
-                        <option value="TEC_ENF">Técnico de Enfermagem</option>
-                        <option value="ENF">Enfermeiro</option>
-                        <option value="MED">Médico</option>
-                        <option value="FISIO">Fisioterapeuta</option>
-                        <option value="FONO">Fonoaudiologia</option>
-                        <option value="NUTRI">Nutricionista</option>
-                        <option value="EP">Experiência do Paciente</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="turno">Turno:</label>
-                    <select id="turno" name="turno" required>
-                        <option value="">Selecione</option>
-                        <option value="MANHÃ">Manhã</option>
-                        <option value="TARDE">Tarde</option>
-                        <option value="NOITE">Noite</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="setor">Setor:</label>
-                    <select id="setor" name="setor" required>
-                        <option value="">Selecione</option>
-                        <option value="UTI ADU">UTI ADU</option>
-                        <option value="UTI PED">UTI PED</option>
-                        <option value="UTI NEO">UTI NEO</option>
-                        <option value="PSA">PSA</option>
-                        <option value="PSI">PSI</option>
-                        <option value="PSGO">PSGO</option>
-                        <option value="PSORT">PSORT</option>
-                        <option value="5°Onco">5°Onco</option>
-                         <option value="5°clinico">5°clinico</option>
-                        <option value="7°">7°</option>
-                        <option value="6°">6°</option>
-                        <option value="mater">mater</option>
-                        <option value="PED">PED</option>
-                        <option value="CC">CC</option>
-                        <option value="CO">CO</option>
-                        <option value="HOSP DIA">HOSP DIA</option>
-                        <option value="SADT">SADT</option>
-                    </select>
-                </div>
-                <fieldset>
-                    <legend>Indicações:</legend>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="indicacoes" value="Ant_pact"> 
-                            Antes do contato com paciente
-                        </label>
-                        <label>
-                            <input type="radio" name="indicacoes" value="Ant_Proced"> 
-                            Antes de procedimento
-                        </label>
-                        <label>
-                            <input type="radio" name="indicacoes" value="Ap_fluid"> 
-                            Após risco de exposição a fluidos
-                        </label>
-                        <label>
-                            <input type="radio" name="indicacoes" value="Ap_pact"> 
-                            Após contato com paciente
-                        </label>
-                        <label>
-                            <input type="radio" name="indicacoes" value="Ap_próximo"> 
-                            Após contato com proximidades do paciente
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Ação:</legend>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="acao" value="Ácool">
-                            Higiene com álcool
-                        </label>
-                        <label>
-                            <input type="radio" name="acao" value="Sabonete">
-                            Higiene com sabonete
-                        </label>
-                        <label>
-                            <input type="radio" name="acao" value="Não">
-                            Nenhuma
-                        </label>
-                        <label>
-                            <input type="radio" name="acao" value="Luvas"> 
-                            Uso de luvas
-                        </label>
-                    </div>
-                </fieldset>
-                <button type="submit" class="btn-submit">Registrar</button>
-            </form>
         </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-6 border-b">
+            <h2 class="text-2xl font-bold text-indigo-600">Preencha os Dados</h2>
+            <p class="text-gray-600 mt-1">Registre a observação de higiene das mãos</p>
+          </div>
+          
+          <form 
+            action="https://api.sheetmonkey.io/form/q32tKC5QrSuJQi7LQUjBpV" 
+            method="post"
+            class="p-6 space-y-6"
+            onsubmit="return handleFormSubmit(event)"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Nome ou Sigla (Observador)
+                </label>
+                <input 
+                  type="text" 
+                  name="nome"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  placeholder="Seu nome ou sigla"
+                  required
+                >
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Observador
+                </label>
+                <select 
+                  name="observador"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  required
+                >
+                  <option value="">Selecione</option>
+                  <option value="oculto">Membro do Time</option>
+                  <option value="scih">SCIH</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Data da auditoria
+                </label>
+                <input 
+                  type="date" 
+                  name="data"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  required
+                >
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Profissional auditado
+                </label>
+                <select 
+                  name="profissao"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  required
+                >
+                  <option value="">Selecione</option>
+                  <option value="TEC_ENF">Técnico de Enfermagem</option>
+                  <option value="ENF">Enfermeiro</option>
+                  <option value="MED">Médico</option>
+                  <option value="FISIO">Fisioterapeuta</option>
+                  <option value="FONO">Fonoaudiologia</option>
+                  <option value="NUTRI">Nutricionista</option>
+                  <option value="EP">Experiência do Paciente</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Turno
+                </label>
+                <select 
+                  name="turno"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  required
+                >
+                  <option value="">Selecione</option>
+                  <option value="MANHÃ">Manhã</option>
+                  <option value="TARDE">Tarde</option>
+                  <option value="NOITE">Noite</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Setor
+                </label>
+                <select 
+                  name="setor"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  required
+                >
+                  <option value="">Selecione</option>
+                  <option value="UTI ADU">UTI ADU</option>
+                  <option value="UTI PED">UTI PED</option>
+                  <option value="UTI NEO">UTI NEO</option>
+                  <option value="PSA">PSA</option>
+                  <option value="PSI">PSI</option>
+                  <option value="PSGO">PSGO</option>
+                  <option value="PSORT">PSORT</option>
+                  <option value="5°Onco">5°Onco</option>
+                  <option value="5°clinico">5°clinico</option>
+                  <option value="7°">7°</option>
+                  <option value="6°">6°</option>
+                  <option value="mater">Mater</option>
+                  <option value="PED">PED</option>
+                  <option value="CC">CC</option>
+                  <option value="CO">CO</option>
+                  <option value="HOSP DIA">HOSP DIA</option>
+                  <option value="SADT">SADT</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-4 border p-4 rounded-lg">
+              <h3 class="text-lg font-semibold text-indigo-600">Indicações</h3>
+              <div class="space-y-3">
+                <label class="flex items-center">
+                  <input type="radio" name="indicacoes" value="Ant_pact" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Antes do contato com paciente</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="indicacoes" value="Ant_Proced" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Antes de procedimento</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="indicacoes" value="Ap_fluid" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Após risco de exposição a fluidos</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="indicacoes" value="Ap_pact" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Após contato com paciente</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="indicacoes" value="Ap_próximo" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Após contato com proximidades do paciente</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="space-y-4 border p-4 rounded-lg">
+              <h3 class="text-lg font-semibold text-indigo-600">Ação</h3>
+              <div class="space-y-3">
+                <label class="flex items-center">
+                  <input type="radio" name="acao" value="Ácool" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Higiene com álcool</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="acao" value="Sabonete" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Higiene com sabonete</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="acao" value="Não" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Nenhuma</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="acao" value="Luvas" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                  <span class="ml-2 text-gray-700">Uso de luvas</span>
+                </label>
+              </div>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Registrar
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
-    <footer>
-            <p>&copy; 2024 - Registro de Higiene das Mãos. Todos os direitos reservados.</p>
-        </div>
+
+    <footer class="bg-indigo-600 text-white py-4 mt-auto">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm opacity-80">&copy; 2024 - Registro de Higiene das Mãos. Todos os direitos reservados.</p>
+      </div>
     </footer>
+  </div>
+
   <script>
- function handleFormSubmit(event) {
-    event.preventDefault(); // Impede o comportamento padrão do envio
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Validação dos grupos de rádio
+      const indicacoesChecked = document.querySelectorAll('input[name="indicacoes"]:checked').length;
+      const acaoChecked = document.querySelectorAll('input[name="acao"]:checked').length;
 
-    const form = event.target;
-    const indicacoesChecked = document.querySelectorAll('input[name="indicacoes"]:checked').length;
-    const acaoChecked = document.querySelectorAll('input[name="acao"]:checked').length;
-
-    const container = document.querySelector('.container');
-
-    // Verifica se pelo menos uma checkbox foi selecionada em cada grupo
-    if  (indicacoesChecked === 0) {
-        container.innerHTML = `
-            <div style="text-align: center; color: #f5be27; border: 1px solid #e00000; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
-                <h2>Aviso</h2>
-                <p>Por favor, selecione pelo menos uma indicação.</p>
-                <button class="btn-submit" onclick="location.reload()">Voltar ao formulário</button>
-            </div>
-        `;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (indicacoesChecked === 0) {
+        alert('Por favor, selecione pelo menos uma indicação.');
         return false;
-    }
+      }
 
-    if (acaoChecked === 0) {
-        container.innerHTML = `
-            <div style="text-align: center; color: #f5be27; border: 1px solid #e00000; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
-                <h2>Aviso</h2>
-                <p>Por favor, selecione pelo menos uma ação.</p>
-                <button class="btn-submit" onclick="location.reload()">Voltar ao formulário</button>
-            </div>
-        `;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (acaoChecked === 0) {
+        alert('Por favor, selecione pelo menos uma ação.');
         return false;
+      }
+
+      // Envio do formulário
+      const form = event.target;
+      form.submit();
+      
+      // Feedback visual
+      const button = form.querySelector('button[type="submit"]');
+      button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 animate-spin" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2a1 1 0 00.293.707l1.414 1.414a1 1 0 101.415-1.414L11 9.586V7z" clip-rule="evenodd" /></svg> Enviando...';
+      button.disabled = true;
+      
+      return true;
     }
-
-    // Enviar dados manualmente usando fetch
-    fetch(form.action, {
-        method: form.method,
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(new FormData(form))
-    }).then(response => {
-        if (response.ok) {
-            container.innerHTML = `
-                <div style="text-align: center;">
-                    <h2>Registro enviado com sucesso!</h2>
-                    <p>Obrigado por contribuir para o monitoramento de higiene das mãos.</p>
-                </div>
-            `;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            container.innerHTML = `
-                <div style="text-align: center; color: #d9534f border: 1px solid #d9534f; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
-                    <h2>Erro</h2>
-                    <p>Ocorreu um erro ao enviar o registro.</p>
-                    <button class="btn-submit" onclick="location.reload()">Tentar novamente</button>
-                </div>
-            `;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    }).catch(error => {
-        console.error("Erro:", error);
-        container.innerHTML = `
-            <div style="text-align: center; color: #d9534f; border: 1px solid #d9534f; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
-                <h2>Erro</h2>
-                <p>Erro ao enviar o registro. Por favor, tente novamente mais tarde.</p>
-                <button class="btn-submit" onclick="location.reload()">Tentar novamente</button>
-            </div>
-        `;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    return false; // Garante que o formulário não será enviado novamente
-}
-
-
-</script>
-
+  </script>
 </body>
 </html>
