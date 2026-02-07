@@ -257,8 +257,6 @@
             <h2><i class="fas fa-info-circle"></i> Informativo</h2>
             <p>Cada formulário enviado será para 1 oportunidade observada!</p>
         </div>
-        <form action="https://api.sheetmonkey.io/form/q32tKC5QrSuJQi7LQUjBpV" method="post"Add commentMore actions
-                  id="hygieneForm" class="form-card" onsubmit="return handleFormSubmit(event)">
             <h2>Preencha os Dados</h2>
             <p>Registre a observação de higiene das mãos.</p>
             
@@ -392,6 +390,8 @@
         </footer>
     </div>
 <script>
+document.getElementById("hygieneForm").addEventListener("submit", handleFormSubmit);
+    
  function handleFormSubmit(event) {
     event.preventDefault(); // Impede o comportamento padrão do envio
 
